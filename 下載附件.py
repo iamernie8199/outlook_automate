@@ -5,6 +5,7 @@ outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
 # 收件匣
 inbox = outlook.GetDefaultFolder(6)
 messages = inbox.Items
+# messages = outlook.Folders.Item("Inbox").Items
 # 倒序排序
 messages = [m for m in messages][::-1]
 
